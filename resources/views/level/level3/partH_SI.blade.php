@@ -4,7 +4,7 @@
 
     PARTE H SI
 
-    <h4>Pregunta 4</h4>
+    <h4>¿ESTE ES TU PERSONAJE?</h4>
     <br>
 {{--    <div>{{$quest->question ?? 0}}</div>--}}
     {{--    <div>{{$alumna ?? 0}}</div>--}}
