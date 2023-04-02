@@ -16,7 +16,7 @@
         <div class="mt-3">
             <div class="radio">
                 <div class="form-check">
-                    <input type="radio" name="type_value" value="1" id="flexRadioDefault1" checked="">
+                    <input type="radio" name="type_value" value="1" id="flexRadioDefault1">
                     <label class="form-check-label" for="flexRadioDefault1">Si</label>
                 </div>
                 <br>
@@ -87,7 +87,7 @@
                     data: get_data(),
 
                     success: function (response) {
-
+                        let message = "Selecciona una de las opciones";
                         var data = $('#save_coupon_club').serializeArray().reduce(function (obj, item) {
                             obj[item.name] = item.value;
                             return obj;
@@ -95,14 +95,16 @@
 
                         console.log('data', data.type_value)
 
-
                         if (data.type_value == "1") {
                             console.log('SI')
-
                             window.location.href = `{{ url("6") }}`
-                        } else {
+                        } else if (data.type_value == "0"){
                             console.log("NO")
                             window.location.href = `{{ url("7") }}`
+                        }else{
+                            alert(message)
+                            console.log("error")
+                            console.log("message", message)
                         }
 
                     }, error(e) {
