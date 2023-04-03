@@ -2,11 +2,9 @@
 @section('contenido')
 
 
-    PARTE H SI
-
-    <h4>¿ESTE ES TU PERSONAJE?</h4>
+    PARTE L NO
     <br>
-{{--    <div>{{$quest->question ?? 0}}</div>--}}
+
     {{--    <div>{{$alumna ?? 0}}</div>--}}
     <div>{{$alumna->first_lastname ?? 0}}</div>
     <div>{{$alumna->second_lastname ?? 0}}</div>
@@ -19,10 +17,9 @@
     <br>
 
 
-
-
     <div class="mt-3">
         <a href="{{url('')}}" class="btn col-md-2 mb-4">Regresar</a>
     </div>
+
 
 @endsection

@@ -20,15 +20,9 @@
     <br>
 
 
-
-
     <div class="mt-3">
-        <a href="{{url('')}}" class="btn btn-secondary btn-block col-md-2 mb-4" tabindex="8">Regresar</a>
+        <a href="{{url('')}}" class="btn col-md-2 mb-4">Regresar</a>
     </div>
 
 
-{{--    <div class="mt-3">--}}
-{{--        <button href="{{url('')}}" class="btn btn-secondary btn-block col-md-2 mb-4" tabindex="8">Regresar</button>--}}
-{{--    </div>--}}
-{{--    --}}
 @endsection
