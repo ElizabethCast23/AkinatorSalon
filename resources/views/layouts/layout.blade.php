@@ -20,6 +20,12 @@
     <script type="text/javascript"
             src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.18/b-1.5.4/b-colvis-1.5.4/b-flash-1.5.4/b-html5-1.5.4/b-print-1.5.4/datatables.min.js"></script>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
 
 
 
@@ -47,6 +53,28 @@
 
         center{
             margin:16px 0;
+        }
+
+        .btn-success{
+            background: #277721;
+        }
+
+        .btn-danger{
+            background: #f32445;
+        }
+
+        .btn-warning{
+            background: #f6e24e;
+        }
+        .btn-info{
+            background: #5fdee3;
+            color: white;
+        }
+        .btn-primary{
+            background: #4d7cfc;
+        }
+        .btn-secondary{
+            background: rgba(110, 103, 103, 0.8);
         }
     </style>
 

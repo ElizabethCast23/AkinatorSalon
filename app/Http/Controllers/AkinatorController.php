@@ -17,19 +17,6 @@ class AkinatorController extends Controller
         return view('level.partA')->with($data);
     }
 
-    public function partAanswer(Request $request)
-    {
-        $type_value = $request->type_value ?? "";
-
-        if($type_value == 0){
-            return view('level.partB_SI');
-
-        }else{
-            return view('level.partB_NO');
-        }
-
-    }
-
     public function partB_SI()
     {
         $quest = Preguntas::where('value', "b")->first();
@@ -37,21 +24,6 @@ class AkinatorController extends Controller
 
         return view('level.partB_SI')->with($data);
     }
-
-    public function partB_SIanswer(Request $request)
-    {
-        $type_value = $request->type_value ?? "";
-
-        if($type_value == 0){
-            return view('level.level2.partC_SI');
-
-        }else{
-            return view('level.level2.partC_NO');
-        }
-
-    }
-
-
 
     public function partB_NO()
     {
@@ -61,18 +33,5 @@ class AkinatorController extends Controller
         return view('level.partB_NO')->with($data);
     }
 
-
-    public function partB_NOanswer(Request $request)
-    {
-        $type_value = $request->type_value ?? "";
-
-        if($type_value == 0){
-            return view('level.level2.partD_SI');
-
-        }else{
-            return view('level.level2.partD_NO');
-        }
-
-    }
 
 }
