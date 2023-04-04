@@ -16,19 +16,6 @@ class Akinator_level3_Controller extends Controller
         return view('level.level3.partE_SI')->with($data);
     }
 
-    public function partE_SIanswer(){
-        $type_value = $request->type_value ?? "";
-
-        if($type_value == 0){
-//            finnnnnnnn
-            return view('level.level4.partI_SI');
-
-        }else{
-//            finnnnnnnn
-            return view('level.level4.partI_NO');
-        }
-    }
-
     public function partE_NO()
     {
         $quest = Preguntas::where('value', "h")->first();
@@ -36,20 +23,6 @@ class Akinator_level3_Controller extends Controller
 
         return view('level.level3.partE_NO')->with($data);
     }
-
-    public function partE_NOanswer(){
-        $type_value = $request->type_value ?? "";
-
-        if($type_value == 0){
-//            finnnnnnnn
-            return view('level.level4.partJ_SI');
-
-        }else{
-//            finnnnnnnn
-            return view('level.level4.partJ_NO');
-        }
-    }
-
 
     public function partF_SI()
     {
@@ -59,38 +32,12 @@ class Akinator_level3_Controller extends Controller
         return view('level.level3.partF_SI')->with($data);
     }
 
-    public function partF_SIanswer(){
-        $type_value = $request->type_value ?? "";
-
-        if($type_value == 0){
-//            finnnnnnnn
-            return view('level.level4.partK_SI');
-
-        }else{
-//            finnnnnnnn
-            return view('level.level4.partK_NO');
-        }
-    }
-
     public function partF_NO()
     {
         $quest = Preguntas::where('value', "i")->first();
         $data['quest'] = $quest ;
 
         return view('level.level3.partF_NO')->with($data);
-    }
-
-    public function partF_NOanswer(){
-        $type_value = $request->type_value ?? "";
-
-        if($type_value == 0){
-//            finnnnnnnn
-            return view('level.level4.partL_SI');
-
-        }else{
-//            finnnnnnnn
-            return view('level.level4.partL_NO');
-        }
     }
 
     public function partG_SI()
@@ -111,20 +58,6 @@ class Akinator_level3_Controller extends Controller
         return view('level.level3.partG_NO')->with($data);
     }
 
-
-    public function partG_NOanswer(){
-        $type_value = $request->type_value ?? "";
-
-        if($type_value == 0){
-//            finnnnnnnn
-            return view('level.level4.partM_SI');
-
-        }else{
-//            finnnnnnnn
-            return view('level.level4.partM_NO');
-        }
-    }
-
     public function partH_SI()
     {
         $alumna = Alumnos::find(11);
@@ -143,16 +76,4 @@ class Akinator_level3_Controller extends Controller
         return view('level.level3.partH_NO')->with($data);
     }
 
-    public function partH_NOanswer(){
-        $type_value = $request->type_value ?? "";
-
-        if($type_value == 0){
-//            finnnnnnnn
-            return view('level.level4.partN_SI');
-
-        }else{
-//            finnnnnnnn
-            return view('level.level4.partN_NO');
-        }
-    }
 }

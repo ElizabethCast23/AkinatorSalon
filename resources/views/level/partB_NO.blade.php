@@ -2,16 +2,17 @@
 @section('contenido')
 
 
-    PARTE B NO
+{{--    PARTE B NO--}}
 
     <h4>Pregunta 2</h4>
     <br>
-    <div>{{$quest->question ?? 0}}</div>
+    <h4>{{$quest->question ?? "-"}}</h4>
+    <h4>(Octubre - Noviembre - Diciembre)</h4>
 
 
     <br>
     <br>
-    <form id="save_coupon_club">
+    <form id="select_value">
         @csrf
         <div class="mt-3">
             <div class="radio">
@@ -50,13 +51,13 @@
             console.log('input_switch', input_switch)
         })
 
-        $('#save_coupon_club').find(`input[name="type_value"]`).change(function () {
+        $('#select_value').find(`input[name="type_value"]`).change(function () {
             var type_value = $(this).val()
             console.log('type_value', type_value)
         })
 
         function get_data() {
-            var data = $('#save_coupon_club').serializeArray().reduce(function (obj, item) {
+            var data = $('#select_value').serializeArray().reduce(function (obj, item) {
                 obj[item.name] = item.value;
                 return obj;
             }, {});
@@ -72,7 +73,7 @@
             return data;
         }
 
-        $("#save_coupon_club").on('submit', function (event) {
+        $("#select_value").on('submit', function (event) {
             event.preventDefault()
             get_data();
             confirmation()
@@ -88,7 +89,7 @@
 
                     success: function (response) {
                         let message = "Selecciona una de las opciones";
-                        var data = $('#save_coupon_club').serializeArray().reduce(function (obj, item) {
+                        var data = $('#select_value').serializeArray().reduce(function (obj, item) {
                             obj[item.name] = item.value;
                             return obj;
                         }, {});

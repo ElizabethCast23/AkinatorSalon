@@ -2,7 +2,7 @@
 @section('contenido')
 
 
-    PARTE K NO
+{{--    PARTE K NO--}}
     <br>
 
     {{--    <div>{{$alumna ?? 0}}</div>--}}
@@ -18,7 +18,7 @@
 
 
     <div class="mt-3">
-        <a href="{{url('')}}" class="btn col-md-2 mb-4">Regresar</a>
+        <a href="{{url('')}}" class="btn btn-secondary btn-block col-md-2 mb-4" tabindex="8">Regresar</a>
     </div>
 
 
